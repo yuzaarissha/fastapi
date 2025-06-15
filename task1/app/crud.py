@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
-from models import Note
-from schemas import NoteCreate
+from .models import Note
+from .schemas import NoteCreate
 
 async def create_note(session: AsyncSession, note_data: NoteCreate) -> Note:
     note = Note(text=note_data.text)

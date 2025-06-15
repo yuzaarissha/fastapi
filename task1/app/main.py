@@ -1,9 +1,9 @@
 from fastapi import FastAPI, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
-
-from database import async_session, init_db
-from schemas import NoteCreate, NoteOut
-from crud import create_note, get_notes
+from .database import async_session, init_db
+from .schemas import NoteCreate, NoteOut
+from .crud import create_note, get_notes
+from .models import Note
 
 app = FastAPI()
 
